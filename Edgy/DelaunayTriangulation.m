@@ -59,7 +59,7 @@
     dt.edges = [NSMutableSet setWithObjects:e1, e2, e3, nil];
     dt.points = [NSMutableSet setWithObjects:p1, p2, p3, nil];
     
-    dt.lightPoint = [DelaunayPoint pointAtX:0 andY:0];
+    dt.lightPoint = [DelaunayPoint pointAtX:200 andY:0];
     
     return dt;
 }

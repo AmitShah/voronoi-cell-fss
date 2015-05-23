@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F7AAE9D1B1055FA0004DFF2 /* EDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */; };
+		3F7AAEA01B1117830004DFF2 /* VoronoiCellSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AAE9F1B1117830004DFF2 /* VoronoiCellSprite.m */; };
 		D508BB7E17714D5600D36144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767813D367E0009A2894 /* Foundation.framework */; };
 		D508BB7F17714D5600D36144 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767A13D367E0009A2894 /* CoreGraphics.framework */; };
 		D508BB8017714D5600D36144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767613D367E0009A2894 /* UIKit.framework */; };
@@ -72,6 +73,8 @@
 /* Begin PBXFileReference section */
 		3F7AAE9B1B0FE5510004DFF2 /* EDGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDGameScene.h; sourceTree = "<group>"; };
 		3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDGameScene.m; sourceTree = "<group>"; };
+		3F7AAE9E1B1116A90004DFF2 /* VoronoiCellSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoronoiCellSprite.h; sourceTree = "<group>"; };
+		3F7AAE9F1B1117830004DFF2 /* VoronoiCellSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoronoiCellSprite.m; path = "Edgy Demo/VoronoiCellSprite.m"; sourceTree = SOURCE_ROOT; };
 		D508BB7D17714D5500D36144 /* Edgy Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edgy Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D508BB8317714D5600D36144 /* Edgy Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edgy Demo-Info.plist"; sourceTree = "<group>"; };
 		D508BB8517714D5600D36144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 				D590C4441527BBC6007248F7 /* VoronoiCell.h */,
 				D590C4451527BBC6007248F7 /* VoronoiCell.m */,
 				D5A55A1313EE19130001ADF7 /* Supporting Files */,
+				3F7AAE9E1B1116A90004DFF2 /* VoronoiCellSprite.h */,
+				3F7AAE9F1B1117830004DFF2 /* VoronoiCellSprite.m */,
 			);
 			path = Edgy;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D508BB9517714D5600D36144 /* EDViewController.m in Sources */,
+				3F7AAEA01B1117830004DFF2 /* VoronoiCellSprite.m in Sources */,
 				D508BB8817714D5600D36144 /* main.m in Sources */,
 				D508BBB417714FD100D36144 /* EDDiagnosticView.m in Sources */,
 				D508BB8C17714D5600D36144 /* EDAppDelegate.m in Sources */,
