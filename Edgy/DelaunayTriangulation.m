@@ -356,7 +356,12 @@
 
 - (NSDictionary*)voronoiCells
 {
+    //lets implement some caching for redraw
+    if ([self.cells count] != 0){
+        return self.cells;
+    }
     NSMutableDictionary *cells = [NSMutableDictionary dictionary];
+    
     for (DelaunayPoint *point in self.points)
     {
         // Don't add voronoi cells at the frame triangle points
@@ -375,6 +380,7 @@
         //[cells addObject:[VoronoiCell voronoiCellAtSite:point withNodes:nodes]];
         [cells setObject:[VoronoiCell voronoiCellAtSite:point withNodes:nodes] forKey:point.idNumber];
     }
+    self.cells = cells;
     return cells;
 }
 

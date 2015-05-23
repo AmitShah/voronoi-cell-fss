@@ -14,4 +14,7 @@
 
 @property (nonatomic, strong) DelaunayTriangulation *triangulation;
 
+
+- (void)updatePosition;
+
 @end

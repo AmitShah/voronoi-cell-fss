@@ -16,6 +16,7 @@
     NSMutableSet *points;
     NSMutableSet *edges;
     NSMutableSet *triangles;
+    NSMutableDictionary *cells;
 }
 
 @property (nonatomic, strong) NSMutableSet *points;
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) NSMutableSet *triangles;
 @property (nonatomic, strong) NSSet *frameTrianglePoints;
 @property (nonatomic,strong) DelaunayPoint * lightPoint;
+@property (nonatomic,strong) NSMutableDictionary *cells;
 + (DelaunayTriangulation *)triangulation;
 + (DelaunayTriangulation *)triangulationWithSize:(CGSize)size;
 + (DelaunayTriangulation *)triangulationWithRect:(CGRect)rect;

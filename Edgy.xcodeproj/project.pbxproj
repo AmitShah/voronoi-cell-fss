@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7AAE9D1B1055FA0004DFF2 /* EDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */; };
 		D508BB7E17714D5600D36144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767813D367E0009A2894 /* Foundation.framework */; };
 		D508BB7F17714D5600D36144 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767A13D367E0009A2894 /* CoreGraphics.framework */; };
 		D508BB8017714D5600D36144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767613D367E0009A2894 /* UIKit.framework */; };
@@ -69,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F7AAE9B1B0FE5510004DFF2 /* EDGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDGameScene.h; sourceTree = "<group>"; };
+		3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDGameScene.m; sourceTree = "<group>"; };
 		D508BB7D17714D5500D36144 /* Edgy Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edgy Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D508BB8317714D5600D36144 /* Edgy Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edgy Demo-Info.plist"; sourceTree = "<group>"; };
 		D508BB8517714D5600D36144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -178,6 +181,8 @@
 				D508BB8217714D5600D36144 /* Supporting Files */,
 				D508BBB217714FD100D36144 /* EDDiagnosticView.h */,
 				D508BBB317714FD100D36144 /* EDDiagnosticView.m */,
+				3F7AAE9B1B0FE5510004DFF2 /* EDGameScene.h */,
+				3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */,
 			);
 			path = "Edgy Demo";
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				D508BB8817714D5600D36144 /* main.m in Sources */,
 				D508BBB417714FD100D36144 /* EDDiagnosticView.m in Sources */,
 				D508BB8C17714D5600D36144 /* EDAppDelegate.m in Sources */,
+				3F7AAE9D1B1055FA0004DFF2 /* EDGameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

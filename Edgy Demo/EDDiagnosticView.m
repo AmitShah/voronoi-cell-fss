@@ -21,7 +21,20 @@
     if (self) {
     }
     return self;
+    
 }
+
+
+- (void)updatePosition {
+    time_t now = (time_t) [[NSDate date] timeIntervalSince1970];
+    
+    DelaunayPoint *newPoint =  [DelaunayPoint pointAtX:400*sin(now)
+                                                  andY:300*cos(now)];
+    _triangulation.lightPoint = newPoint;
+    [self setNeedsDisplay];
+}
+
+
 
 - (void)drawRect:(CGRect)rect
 {
