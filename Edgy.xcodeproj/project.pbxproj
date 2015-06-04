@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F7AAE9D1B1055FA0004DFF2 /* EDGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */; };
 		3F7AAEA01B1117830004DFF2 /* VoronoiCellSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7AAE9F1B1117830004DFF2 /* VoronoiCellSprite.m */; };
+		3F8FDD7B1B203122002199F2 /* aud.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FDD7A1B203122002199F2 /* aud.gpx */; };
 		D508BB7E17714D5600D36144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767813D367E0009A2894 /* Foundation.framework */; };
 		D508BB7F17714D5600D36144 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767A13D367E0009A2894 /* CoreGraphics.framework */; };
 		D508BB8017714D5600D36144 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E1767613D367E0009A2894 /* UIKit.framework */; };
@@ -75,6 +76,7 @@
 		3F7AAE9C1B1055FA0004DFF2 /* EDGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDGameScene.m; sourceTree = "<group>"; };
 		3F7AAE9E1B1116A90004DFF2 /* VoronoiCellSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoronoiCellSprite.h; sourceTree = "<group>"; };
 		3F7AAE9F1B1117830004DFF2 /* VoronoiCellSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VoronoiCellSprite.m; path = "Edgy Demo/VoronoiCellSprite.m"; sourceTree = SOURCE_ROOT; };
+		3F8FDD7A1B203122002199F2 /* aud.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = aud.gpx; sourceTree = "<group>"; };
 		D508BB7D17714D5500D36144 /* Edgy Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Edgy Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D508BB8317714D5600D36144 /* Edgy Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Edgy Demo-Info.plist"; sourceTree = "<group>"; };
 		D508BB8517714D5600D36144 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 		D5E1766713D367E0009A2894 = {
 			isa = PBXGroup;
 			children = (
+				3F8FDD7A1B203122002199F2 /* aud.gpx */,
 				D508BB8117714D5600D36144 /* Edgy Demo */,
 				D5E1767C13D367E0009A2894 /* DelaunayTest */,
 				D5A55A1213EE19130001ADF7 /* Edgy */,
@@ -406,8 +409,25 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = Stanford;
 				TargetAttributes = {
+					D508BB7C17714D5500D36144 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					D508BB9B17714D5600D36144 = {
 						TestTargetID = D5E1767113D367E0009A2894;
+					};
+					D5E1767113D367E0009A2894 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -460,6 +480,7 @@
 				D5E1768A13D367E0009A2894 /* MainWindow.xib in Resources */,
 				D5E1769013D367E0009A2894 /* DelaunayTestViewController.xib in Resources */,
 				D5E176A313D4DFE9009A2894 /* todo in Resources */,
+				3F8FDD7B1B203122002199F2 /* aud.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,7 +836,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DelaunayTest/DelaunayTest-Prefix.pch";
 				HEADER_SEARCH_PATHS = Edgy/;
-				INFOPLIST_FILE = "DelaunayTest/DelaunayTest-Info.plist";
+				INFOPLIST_FILE = "Edgy Demo/Edgy Demo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -829,7 +850,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DelaunayTest/DelaunayTest-Prefix.pch";
 				HEADER_SEARCH_PATHS = Edgy/;
-				INFOPLIST_FILE = "DelaunayTest/DelaunayTest-Info.plist";
+				INFOPLIST_FILE = "Edgy Demo/Edgy Demo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
