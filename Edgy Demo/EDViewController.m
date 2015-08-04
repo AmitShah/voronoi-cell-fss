@@ -42,6 +42,9 @@
     // Create and configure the scene.
     scene = [EDGameScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    
+    self.navigationController.navigationBar.hidden = TRUE;
+    
     [self reset];
     // Present the scene.
     [skView presentScene:scene];
@@ -49,6 +52,39 @@
     [scene setupTriangles];
     
     
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    CGFloat centerX = screenSize.width / 2;
+    CGFloat centerY = screenSize.height / 2;
+    
+    UILabel *lbl1 = [[UILabel alloc] init];
+    /*important--------- */lbl1.textColor = [UIColor blackColor];
+    [lbl1 setFrame:self.view.bounds];
+    lbl1.backgroundColor=[UIColor clearColor];
+    lbl1.textColor=[UIColor whiteColor];
+    lbl1.alpha = 0.1f;
+    lbl1.userInteractionEnabled=NO;
+    lbl1.text= @"C R O W D S P A R Q";
+    lbl1.center = CGPointMake(centerX, centerY);
+    lbl1.textAlignment = NSTextAlignmentCenter;
+    lbl1.font =[UIFont systemFontOfSize:24];
+    [self.view addSubview:lbl1];
+    
+    EDViewController * edvc = self;
+
+    
+    [UIView animateWithDuration:5.00 animations:^{
+        lbl1.center = CGPointMake(centerX,centerY-130);
+        lbl1.alpha = 1.0f;
+    }
+     
+          completion:^ (BOOL finished)
+     {
+         if (finished) {
+             [[edvc navigationController] setNavigationBarHidden:NO animated:YES];
+             edvc.navigationController.navigationBar.hidden = FALSE;
+             edvc.navigationController.navigationBar.alpha = 0.2;
+         }
+     }];
 }
 
 - (BOOL)shouldAutorotate

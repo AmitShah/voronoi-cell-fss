@@ -1,0 +1,5 @@
+pod 'IQKeyboardManager'
+pod 'EAIntroView', '~> 2.7.0'
+pod 'SSBouncyButton', '~> 1.0'
+pod 'FlatUIKit'
+pod 'Motif'

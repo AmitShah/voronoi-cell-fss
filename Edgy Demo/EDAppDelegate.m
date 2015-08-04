@@ -75,7 +75,7 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     BOOL canUseLocationNotifications = (status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse);
     
     if (canUseLocationNotifications) {
-        [self startRegionMonitoring]; // Custom method defined below
+        //[self startRegionMonitoring]; // Custom method defined below
     }
 }
 
@@ -85,9 +85,10 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     CLCircularRegion* region = [[CLCircularRegion alloc]
                                 initWithCenter:CLLocationCoordinate2DMake(43.451268,-80.498642)
                                 radius:1000.0
-                                identifier:@"kitchener rangers"];
+                                identifier:@"kitchenerrangers"];
     region.notifyOnEntry = YES;
     region.notifyOnExit = YES;
+    //This can only be called in AlwaysMode, which nobody wants to give you
     [self.locationManager startMonitoringForRegion: region];
     
 }
@@ -118,6 +119,11 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     NSLog(@"OldLocation %f %f", oldLocation.coordinate.latitude, oldLocation.coordinate.longitude);
     NSLog(@"NewLocation %f %f", newLocation.coordinate.latitude, newLocation.coordinate.longitude);
+    if(pow((newLocation.coordinate.latitude - 43.451268),2.0) + pow((newLocation.coordinate.longitude - -80.498642),2.0) <  1000.0){
+        NSLog(@"entered AUD");
+    }else{
+        NSLog(@"outside AUD");
+    }
 }
 
 @end
